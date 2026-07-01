@@ -1,0 +1,225 @@
+{
+  "info": {
+    "_postman_id": "d9018c4c-6f3e-4439-85a1-f13728ac7b53",
+    "name": "Student Management API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "51902366"
+  },
+  "item": [
+    {
+      "name": "Login (JWT)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Students",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzgyOTExMjQ2LCJpYXQiOjE3ODI5MTA2NDYsImp0aSI6IjE5OTUyMTM2YTk3OTQ4YzhiMjllZmZmNDc0ZDY2MjQ0IiwidXNlcl9pZCI6IjMifQ.kdI1PLlqIyEcVjyeVP6RtpEi4CPa-aJC6VND6y9yZZI",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/students/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "students",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Student",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzgyOTExMjQ2LCJpYXQiOjE3ODI5MTA2NDYsImp0aSI6IjE5OTUyMTM2YTk3OTQ4YzhiMjllZmZmNDc0ZDY2MjQ0IiwidXNlcl9pZCI6IjMifQ.kdI1PLlqIyEcVjyeVP6RtpEi4CPa-aJC6VND6y9yZZI",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\":\"Alice\",\r\n    \"age\":19Update,\r\n    \"email\":\"alice@gmail.com\",\r\n    \"course\":\"AI\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/students/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "students",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Student",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzgyOTEyMTU5LCJpYXQiOjE3ODI5MTE1NTksImp0aSI6IjRiMTdiMTQwNDBkODQwODZhNTZlNTAzZGQ1NTdiZTU1IiwidXNlcl9pZCI6IjMifQ.EwLrTt-ZXAd9SDYlLwb63AgANBHCbD4ss-cmoSUx09c",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"course\":\"AI & Data Science\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/students/10/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "students",
+            "10",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Search Student",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzgyOTEyMTU5LCJpYXQiOjE3ODI5MTE1NTksImp0aSI6IjRiMTdiMTQwNDBkODQwODZhNTZlNTAzZGQ1NTdiZTU1IiwidXNlcl9pZCI6IjMifQ.EwLrTt-ZXAd9SDYlLwb63AgANBHCbD4ss-cmoSUx09c",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/students/?search=AI",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "students",
+            ""
+          ],
+          "query": [
+            {
+              "key": "search",
+              "value": "AI"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Invalid Request",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzgyOTEyMTU5LCJpYXQiOjE3ODI5MTE1NTksImp0aSI6IjRiMTdiMTQwNDBkODQwODZhNTZlNTAzZGQ1NTdiZTU1IiwidXNlcl9pZCI6IjMifQ.EwLrTt-ZXAd9SDYlLwb63AgANBHCbD4ss-cmoSUx09c",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\":\"\",\r\n    \"age\":\"abc\"\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/students/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "students",
+            ""
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
